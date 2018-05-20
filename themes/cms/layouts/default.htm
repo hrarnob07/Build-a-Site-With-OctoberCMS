@@ -1,0 +1,32 @@
+==
+<!DOCTYPE>
+<html>
+<head>
+	<title> cms {{ this.page.title }} </title>
+	<link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
+	<link rel="stylesheet"  href="{{'assets/css/theme.css'|theme}}">
+	{% styles %}
+</head>
+
+
+<body>
+<div class="container">
+	    <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+       
+        <section id="layout-content">
+            {% page %}
+        </section>   
+        <footer>
+    	  {% partial 'site/footer'%}
+        </footer>
+ </div>
+    <script src="{{'assets/vendor/jquery.js'|theme}}"></script>
+    <script src="{{'assets/vendor/bootstrap.js'|theme}}"></script>
+    <script src="{{'assets/javascript/app.js'|theme}}"></script>
+    	
+</body>
+
+</html>

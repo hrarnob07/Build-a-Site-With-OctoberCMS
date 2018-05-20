@@ -1,10 +1,11 @@
-1526280166a:1:{s:16:"site/sidebar.htm";a:6:{s:8:"fileName";s:16:"site/sidebar.htm";s:7:"content";s:1231:"[blogPosts]
-postsPerPage = "5"
+1526353127a:1:{s:16:"site/sidebar.htm";a:6:{s:8:"fileName";s:16:"site/sidebar.htm";s:7:"content";s:1576:"[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
-sortOrder = "published_at desc"
 ==
-
 <div class="sidebar-close visible-sm visible-xs">
     <a href="javascript:;" onclick="toggleSidebar()" class="close">&times;</a>
 </div>
@@ -19,6 +20,15 @@ sortOrder = "published_at desc"
 </div>
 
 <div class="sidebar-segment">
+    <h2 class="segment-title">Main Manu</h2>
+    <ul class="segment-list">
+    <li><a href="{{ 'home'|page }}">HOME</a></li>
+    <li><a href="{{ 'contact'|page }}">CONTACT</a></li>
+        
+    </ul>
+</div>
+
+<div class="sidebar-segment">
     <h2 class="segment-title">Recent posts</h2>
     <ul class="segment-list">
         {% for post in blogPosts.posts %}
@@ -38,8 +48,7 @@ sortOrder = "published_at desc"
         {% endif %}
         <li><a href="{{ 'blog/rss'|page }}">RSS Feed</a></li>
     </ul>
-</div>
-";s:5:"mtime";i:1526279530;s:6:"markup";s:1109:"<div class="sidebar-close visible-sm visible-xs">
+</div>";s:5:"mtime";i:1526351901;s:6:"markup";s:1389:"<div class="sidebar-close visible-sm visible-xs">
     <a href="javascript:;" onclick="toggleSidebar()" class="close">&times;</a>
 </div>
 
@@ -53,6 +62,15 @@ sortOrder = "published_at desc"
 </div>
 
 <div class="sidebar-segment">
+    <h2 class="segment-title">Main Manu</h2>
+    <ul class="segment-list">
+    <li><a href="{{ 'home'|page }}">HOME</a></li>
+    <li><a href="{{ 'contact'|page }}">CONTACT</a></li>
+        
+    </ul>
+</div>
+
+<div class="sidebar-segment">
     <h2 class="segment-title">Recent posts</h2>
     <ul class="segment-list">
         {% for post in blogPosts.posts %}
@@ -72,4 +90,4 @@ sortOrder = "published_at desc"
         {% endif %}
         <li><a href="{{ 'blog/rss'|page }}">RSS Feed</a></li>
     </ul>
-</div>";s:4:"code";N;s:9:"blogPosts";a:4:{s:12:"postsPerPage";s:1:"5";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";s:9:"sortOrder";s:17:"published_at desc";}}}
+</div>";s:4:"code";N;s:9:"blogPosts";a:6:{s:10:"pageNumber";s:11:"{{ :page }}";s:12:"postsPerPage";s:1:"5";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";}}}

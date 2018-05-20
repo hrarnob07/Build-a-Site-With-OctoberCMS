@@ -22,8 +22,8 @@ class __TwigTemplate_85f12ed84c0f230ed24fbd77b61ab5cbf32f82811147d593a363b9cd491
         // line 3
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "
-        &mdash; Powered by <a href=\"#\">October CMS</a>
-        using <a href=\"https://github.com/responsiv/clean-theme\">a clean theme</a>.
+        &mdash; Powered by <a href=\"#\">October CMS(HR Arnob)</a>
+        using <a href=\"https://github.com/responsiv/clean-theme\">clean theam</a>.
     </p>
 </div>";
     }
@@ -48,8 +48,8 @@ class __TwigTemplate_85f12ed84c0f230ed24fbd77b61ab5cbf32f82811147d593a363b9cd491
         return new Twig_Source("<div class=\"footer-inner\">
     <p class=\"muted credit\">
         &copy; 2013 - {{ \"now\"|date(\"Y\") }}
-        &mdash; Powered by <a href=\"#\">October CMS</a>
-        using <a href=\"https://github.com/responsiv/clean-theme\">a clean theme</a>.
+        &mdash; Powered by <a href=\"#\">October CMS(HR Arnob)</a>
+        using <a href=\"https://github.com/responsiv/clean-theme\">clean theam</a>.
     </p>
 </div>", "C:\\xampp\\htdocs\\cms/themes/responsiv-clean/partials/site/footer.htm", "");
     }

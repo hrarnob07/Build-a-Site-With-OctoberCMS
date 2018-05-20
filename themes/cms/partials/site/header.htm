@@ -1,0 +1,17 @@
+
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">{{this.theme.site_name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="nav navbar-nav ">
+             <li class="{% if this.page.id=='home' %}active{% endif %}"><a href="{{'home'|page}}">Home</a></li>
+            <li class="{% if this.page.id=='about' %}active{% endif %}"><a href="{{'about'|page}}">About</a></li>
+            <li class="{% if this.page.id=='blog' %}active{% endif %}"><a href="{{'blog'|page}}">Blog</a></li>
+            <li class="{% if this.page.id=='contact' %}active{% endif %}"><a href="{{'contact'|page}}">Contact</a></li>
+          </ul>
+
+        </div>
+      </nav>

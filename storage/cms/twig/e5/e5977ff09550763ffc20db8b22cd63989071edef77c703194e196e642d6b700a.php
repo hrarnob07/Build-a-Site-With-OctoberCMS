@@ -38,14 +38,29 @@ class __TwigTemplate_730aeb007b5bb3cd9aa9e27b2d6aa36d8b62358e9a10e40861f4aa834d2
 </div>
 
 <div class=\"sidebar-segment\">
+    <h2 class=\"segment-title\">Main Manu</h2>
+    <ul class=\"segment-list\">
+    <li><a href=\"";
+        // line 17
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("home");
+        echo "\">HOME</a></li>
+    <li><a href=\"";
+        // line 18
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("contact");
+        echo "\">CONTACT</a></li>
+        
+    </ul>
+</div>
+
+<div class=\"sidebar-segment\">
     <h2 class=\"segment-title\">Recent posts</h2>
     <ul class=\"segment-list\">
         ";
-        // line 17
+        // line 26
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->getSourceContext(), ($context["blogPosts"] ?? null), "posts", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
-            // line 18
+            // line 27
             echo "            <li><a href=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["post"], "url", array()), "html", null, true);
             echo "\">";
@@ -56,7 +71,7 @@ class __TwigTemplate_730aeb007b5bb3cd9aa9e27b2d6aa36d8b62358e9a10e40861f4aa834d2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 20
+        // line 29
         echo "    </ul>
 </div>
 
@@ -64,24 +79,24 @@ class __TwigTemplate_730aeb007b5bb3cd9aa9e27b2d6aa36d8b62358e9a10e40861f4aa834d2
     <h2 class=\"segment-title\">Follow me</h2>
     <ul class=\"segment-list\">
         ";
-        // line 26
+        // line 35
         if (twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), ($context["this"] ?? null), "theme", array()), "twitter_url", array())) {
-            // line 27
+            // line 36
             echo "            <li><a href=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), ($context["this"] ?? null), "theme", array()), "twitter_url", array()), "html", null, true);
             echo "\" target=\"_blank\">Twitter</a></li>
         ";
         }
-        // line 29
+        // line 38
         echo "        ";
         if (twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), ($context["this"] ?? null), "theme", array()), "facebook_url", array())) {
-            // line 30
+            // line 39
             echo "            <li><a href=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), ($context["this"] ?? null), "theme", array()), "facebook_url", array()), "html", null, true);
             echo "\" target=\"_blank\">Facebook</a></li>
         ";
         }
-        // line 32
+        // line 41
         echo "        <li><a href=\"";
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("blog/rss");
         echo "\">RSS Feed</a></li>
@@ -101,7 +116,7 @@ class __TwigTemplate_730aeb007b5bb3cd9aa9e27b2d6aa36d8b62358e9a10e40861f4aa834d2
 
     public function getDebugInfo()
     {
-        return array (  85 => 32,  79 => 30,  76 => 29,  70 => 27,  68 => 26,  60 => 20,  49 => 18,  45 => 17,  35 => 10,  27 => 7,  19 => 1,);
+        return array (  100 => 41,  94 => 39,  91 => 38,  85 => 36,  83 => 35,  75 => 29,  64 => 27,  60 => 26,  49 => 18,  45 => 17,  35 => 10,  27 => 7,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -117,6 +132,15 @@ class __TwigTemplate_730aeb007b5bb3cd9aa9e27b2d6aa36d8b62358e9a10e40861f4aa834d2
     <p class=\"site-motto\">
         {{ this.theme.site_motto }}
     </p>
+</div>
+
+<div class=\"sidebar-segment\">
+    <h2 class=\"segment-title\">Main Manu</h2>
+    <ul class=\"segment-list\">
+    <li><a href=\"{{ 'home'|page }}\">HOME</a></li>
+    <li><a href=\"{{ 'contact'|page }}\">CONTACT</a></li>
+        
+    </ul>
 </div>
 
 <div class=\"sidebar-segment\">
